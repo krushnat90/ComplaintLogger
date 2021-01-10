@@ -6,6 +6,7 @@ public enum Messages {
 	complaint_added_unsuccessfully("Your complaint could not be added"),
 	
 	complaint_updated_successfully("Your complaint is updated successfully"),
+	complaint_not_found("Your complaint id is not in the database. Kindly verify."),
 	complaint_deleted_successfully("Your complaint is deleted successfully");
 	
 	private String message;

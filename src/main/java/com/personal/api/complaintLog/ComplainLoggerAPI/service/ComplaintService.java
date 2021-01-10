@@ -13,4 +13,5 @@ public interface ComplaintService {
 	
 	ResponseBean addComplaint(Complaints comp);
 
+	ResponseBean deleteComplaint(String complaintId);
 }

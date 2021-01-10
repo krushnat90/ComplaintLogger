@@ -4,6 +4,8 @@ import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import ch.qos.logback.core.status.Status;
+
 @Document(collection="complaints")
 public class Complaints {
 	
@@ -22,6 +24,30 @@ public class Complaints {
 	
 	private String systemLog;
 	
+	private String complaintID;
+	
+	private String status;
+	
+
+	public String getComplaintID() {
+		return complaintID;
+	}
+
+
+	public void setComplaintID(String complaintID) {
+		this.complaintID = complaintID;
+	}
+
+
+	public String getStatus() {
+		return status;
+	}
+
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
 
 	public String getDate() {
 		return date;

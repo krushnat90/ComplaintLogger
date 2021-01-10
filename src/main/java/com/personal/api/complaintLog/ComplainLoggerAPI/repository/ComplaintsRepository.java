@@ -8,4 +8,5 @@ import com.personal.api.complaintLog.ComplainLoggerAPI.model.Complaints;
 @Repository
 public interface ComplaintsRepository extends MongoRepository<Complaints, String> {
 
+	
 }
