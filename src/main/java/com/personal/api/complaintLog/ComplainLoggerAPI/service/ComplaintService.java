@@ -9,9 +9,13 @@ public interface ComplaintService {
 	
 	List<Complaints> getAllComplaints();
 	
+	Complaints getByComplaintID(String id);
+	
 	Complaints getComplaintByData(Complaints comp);
 	
 	ResponseBean addComplaint(Complaints comp);
 
 	ResponseBean deleteComplaint(String complaintId);
+	
+	ResponseBean updateComplaint(Complaints complaintId);
 }
