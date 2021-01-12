@@ -4,12 +4,15 @@ import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import ch.qos.logback.core.status.Status;
 
 @Document(collection = "complaints")
 public class Complaints {
 
 	@Id
+	@JsonIgnore
 	private ObjectId _id;
 
 	private String userName;

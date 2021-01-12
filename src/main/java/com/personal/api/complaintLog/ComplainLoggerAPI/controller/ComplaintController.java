@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.personal.api.complaintLog.ComplainLoggerAPI.bean.ResponseBean;
 import com.personal.api.complaintLog.ComplainLoggerAPI.model.Complaints;
 import com.personal.api.complaintLog.ComplainLoggerAPI.service.ComplaintService;
+import com.personal.api.complaintLog.ComplainLoggerAPI.util.Constants;
 
 @RestController
 @RequestMapping("/complaints")
@@ -26,7 +27,7 @@ public class ComplaintController {
 	
 	@GetMapping("/")
 	public String sayHello(){
-		return "Hello";
+		return Constants.hello_message;
 	}
 	
 	@GetMapping(value={"/showAll","/getAll","displayAll"})
