@@ -26,6 +26,9 @@ public class ComplainLoggerApiApplication {
 
 	@Value("${DBName}")
 	private String databaseName;
+	
+	@Value("${AllowedOrigins}")
+	private String allowedOrigins;
 
 	public static void main(String[] args) {
 		SpringApplication.run(ComplainLoggerApiApplication.class, args);
@@ -65,7 +68,7 @@ public class ComplainLoggerApiApplication {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/**").allowedOrigins("http://localhost:3000")
+                registry.addMapping("/**").allowedOrigins(allowedOrigins)
                 .allowedMethods("GET", "POST", "PUT", "OPTIONS", "DELETE", "PATCH");
             }
         };
