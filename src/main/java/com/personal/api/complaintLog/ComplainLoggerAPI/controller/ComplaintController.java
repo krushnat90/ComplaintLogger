@@ -36,8 +36,8 @@ public class ComplaintController {
 		return service.getAllComplaints();
 	}
 	
-	@GetMapping(value={"/show/{compID}"})
-	public Complaints getComplaint(@PathVariable(name="compID") String id){
+	@GetMapping(value={"/show/{complaintID}"})
+	public Complaints getComplaint(@PathVariable(name="complaintID") String id){
 		return service.getByComplaintID(id);
 	}
 	
@@ -46,8 +46,8 @@ public class ComplaintController {
 		return service.addComplaint(comp);
 	}
 	
-	@DeleteMapping("/deleteComplaint")
-	public ResponseBean deleteComplaint(@RequestBody String complaintID){
+	@DeleteMapping("/deleteComplaint/{complaintID}")
+	public ResponseBean deleteComplaint(@PathVariable(name="complaintID") String complaintID){
 		
 		return service.deleteComplaint(complaintID);
 	}

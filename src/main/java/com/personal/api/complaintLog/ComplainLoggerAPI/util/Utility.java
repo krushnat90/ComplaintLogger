@@ -9,9 +9,9 @@ public class Utility {
 		StringBuilder sb = new StringBuilder();
 		
 		
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd_HHmmssSSS");
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmmssSSS");
 		
-		sb.append(userID).append("_").append(sdf.format(new Date()));
+		sb.append(sdf.format(new Date()));
 		
 		return sb.toString();
 	}
