@@ -59,7 +59,7 @@ class ViewAllComplaintsComponent extends Component {
     ComplaintDataService.deleteComplaint(id)
         .then(
             response => {
-                this.setState({ message: `Delete of complaint id - ${id} successful` })
+                this.setState({ message: `Deleted complaint id - ${id} successfully` })
                 this.viewAllComplaints()
             }
         )
