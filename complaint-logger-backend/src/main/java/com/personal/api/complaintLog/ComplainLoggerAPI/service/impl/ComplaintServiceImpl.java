@@ -45,6 +45,7 @@ public class ComplaintServiceImpl implements ComplaintService {
 	public ResponseBean addComplaint(Complaints comp) {
 
 		comp.setComplaintID(Utility.createComplaintID(comp.getUserName()));
+		comp.setDate(Utility.getTodaysDate());
 		comp.setStatus(Status.ACTIVE.toString());
 
 		Complaints obj = complaintRepo.save(comp);
@@ -95,23 +96,7 @@ public class ComplaintServiceImpl implements ComplaintService {
 
 		ComplaintsBuilder cb = new ComplaintsBuilder(DbBean);
 
-		if (StringUtils.isNotBlank(incoming.getDate())) {
-			cb.addDate(incoming.getDate());
-		}
-		if (StringUtils.isNotBlank(incoming.getDeviceType())) {
-			cb.addDeviceType(incoming.getDeviceType());
-		}
-		if (StringUtils.isNotBlank(incoming.getLocation())) {
-			cb.addLocation(incoming.getLocation());
-		}
-
-		if (StringUtils.isNotBlank(incoming.getComplaint())) {
-			cb.addComplaint(incoming.getComplaint());
-		}
-
-		if (StringUtils.isNotBlank(incoming.getSystemLog())) {
-			cb.addLog(incoming.getSystemLog());
-		}
+		
 		if (StringUtils.isNotBlank(incoming.getStatus())) {
 			cb.addStatus(incoming.getStatus());
 		}
