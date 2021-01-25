@@ -1,9 +1,8 @@
 package com.personal.api.complaintLog.ComplainLoggerAPI.enums;
 
-public enum Status {
-	
-	ACTIVE,
-	RESOLVED,
-	PENDING;
+public enum ComplaintBeanProperties {
 
+	resolution,
+	status;
+	
 }

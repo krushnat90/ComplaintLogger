@@ -1,6 +1,5 @@
 package com.personal.api.complaintLog.ComplainLoggerAPI.repository.impl;
 
-import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
