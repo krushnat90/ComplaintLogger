@@ -47,7 +47,7 @@ class UpdateComplaintComponent extends Component {
     }
 
     validate(values) {
-        
+        this.state.validateResolution = '';
         if (!values.resolution) {
             this.state.validateResolution = 'Resolution is mandatory'
         } else if (values.resolution.length < 5) {
@@ -82,7 +82,7 @@ class UpdateComplaintComponent extends Component {
 
       return (
           <div>
-              <center><h3>Complaint Details</h3></center>
+              <center><h3>Update Complaint</h3></center>
               <br/>
               <div className="container">
                   <Formik
