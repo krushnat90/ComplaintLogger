@@ -122,7 +122,7 @@ class AddComplaintComponent extends Component {
                                   </fieldset>
                                   <fieldset className="form-group">
                                       <label>Device Type :</label>
-                                      <Field className="form-control" component="select" name="status">
+                                      <Field className="form-control" component="select" name="deviceType">
                                             <option value="mobile">MOBILE</option>
                                             <option value="tablet">TABLET</option>
                                             <option value="desktop">DESKTOP</option>
